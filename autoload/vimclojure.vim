@@ -512,9 +512,9 @@ function! vimclojure#ExecuteNailWithInput(nail, input, ...)
 					\ + a:000)
 		let cmd = join(cmdline, " ") . " <" . inputfile
 		" Add hardcore quoting for Windows
-		if has("win32") || has("win64")
-			let cmd = '"' . cmd . '"'
-		endif
+		"if has("win32") || has("win64")
+			"let cmd = '"' . cmd . '"'
+		"endif
 
 		let output = system(cmd)
 
